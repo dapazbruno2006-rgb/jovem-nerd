@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Oswald";
+    src: url("/img/Oswald/Oswald-VariableFont_wght.ttf") format("truetype");
+}
+*{
+    margin: 0;
+    font-family: inherit;
+}
+body{
+    background-color: #e5e7eb
+}
+header{
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    border-bottom: 1px solid #888;
+}
+
+header img {
+    height: 60px;
+    width: auto;
+}
+
+header button {
+    position: absolute;
+    left: 40px;
+    background: none;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+nav{
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 2rem;
+}
+.podcast-titulo{
+    color: #00a3c6;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+}
+.noticias-titulo{
+    color: #3dbc8e;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+}
+.videos-titulo{
+    color: #ffa052;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+}
