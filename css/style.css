@@ -13,43 +13,64 @@ a{
 body{
     background-color: #e5e7eb;
 }
-header{
-    background-color: #282828;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 50px;
-    border-bottom: 1px solid #888;
+/* CABEÇALHO PRINCIPAL */
+
+.cabecalho{
+    position: sticky;
     top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
-header img {
+header{
+    background-color: #282828;
+    border-bottom: 0.5px solid #484848;
+}
+
+.topo{
+    width: 85%;
+    margin: auto;
+    height: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+/* LOGO */
+
+.logo{
+    justify-self: center;
+}
+
+.logo img{
     height: 60px;
     width: auto;
+    display: block;
 }
+
+/* MENU HAMBÚRGUER */
 
 .hamburger{
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
+
 .hamburger span{
     display: block;
-    width: 24px;              
-    height: 3px;              
-    background-color: #ffffff;
+    width: 24px;
+    height: 3px;
+    background-color: white;
     border-radius: 2px;
 }
 
-.menubutton {
-    position: absolute;
+.menubutton{
     display: flex;
-    left: 40px;
+    justify-self: start;
+    align-items: center;
     background: none;
     color: white;
-    text-decoration: none;
     border: none;
-    align-items: center;
     cursor: pointer;
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
@@ -58,12 +79,71 @@ header img {
     padding: 0;
     gap: 12px;
 }
+
+/* ÍCONES DO LADO DIREITO */
+
+.icones{
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 30px;
+}
+
+.lua, .pesquisa{
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.lua{
+    font-size: 30px;
+}
+
+/* LUPA */
+
+.lupa{
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.lupa::after{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: white;
+    right: -6px;
+    bottom: -3px;
+    transform: rotate(45deg);
+}
+
+/* NAVEGAÇÃO */
+
 nav{
     background-color: #282828;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 2rem;
+    height: 55px;
+    background-image: linear-gradient(
+        to right,
+        #00a3c6,
+        #3dbc8e,
+        #ffa052
+    );
+    background-size: 100% 3px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+nav a{
+    flex: 1;
+    text-align: center;
 }
 .pagina{
     width: 75%;
@@ -154,18 +234,23 @@ nav{
 }
 .podcast-titulo{
     color: #00a3c6;
-    text-decoration: none;
-    font-family: "Oswald", sans-serif;
+   
 }
 .noticias-titulo{
     color: #3dbc8e;
-    text-decoration: none;
-    font-family: "Oswald", sans-serif;
-}
+  }
 .videos-titulo{
     color: #ffa052;
-    text-decoration: none;
-    font-family: "Oswald", sans-serif;
+    
+}
+
+nav a{
+    flex: 1;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
 }
 footer{
     background-color: #282828;
