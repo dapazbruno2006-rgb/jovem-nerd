@@ -64,6 +64,20 @@ header img {
     display: block;
 }
 
+.lua {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.lua img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
 .topo {
     display: flex;
     align-items: center;

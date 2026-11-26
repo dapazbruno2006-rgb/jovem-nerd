@@ -1,8 +1,3 @@
-/* Tema claro/escuro compartilhado por todas as páginas.
-   Padrão do site: escuro. A escolha fica salva no navegador (localStorage)
-   e vale para todas as páginas. Para o padrão ser claro, troque "escuro"
-   por "claro" na constante PADRAO. */
-
 (function () {
     var CHAVE = "tema-jovemnerd";
     var PADRAO = "escuro";
@@ -22,14 +17,14 @@
         if (!botao) return;
 
         function atualizarBotao() {
-            if (raiz.getAttribute("data-tema") === "escuro") {
-                botao.textContent = "☀";
-                botao.setAttribute("aria-label", "Mudar para tema claro");
-            } else {
-                botao.textContent = "☾";
-                botao.setAttribute("aria-label", "Mudar para tema escuro");
-            }
-        }
+  if (raiz.getAttribute("data-tema") === "escuro") {
+    botao.textContent = "☀";
+    botao.setAttribute("aria-label", "Mudar para tema claro");
+  } else {
+    botao.innerHTML = '<img src="../img/meia-lua.png" alt="">';
+    botao.setAttribute("aria-label", "Mudar para tema escuro");
+  }
+}
 
         botao.addEventListener("click", function () {
             var novo = raiz.getAttribute("data-tema") === "escuro" ? "claro" : "escuro";
