@@ -1,11 +1,10 @@
 /* =========================================================
-   STYLE.CSS UNIFICADO
-   Nenhum seletor foi renomeado. Onde o mesmo seletor aparece
-   mais de uma vez, as regras foram mantidas na ordem original
-   (a última declaração vence, como já acontecia antes).
+   STYLE.CSS
+   Usado pela home (index.html) e pela página de busca.
+   Cada seção diz de qual página ela é.
    ========================================================= */
 
-/* ---------- FONTES ---------- */
+/* ---------- FONTE ---------- */
 
 @font-face {
     font-family: "Oswald";
@@ -13,34 +12,24 @@
     font-weight: 200 700;
 }
 
-@font-face {
-    font-family: "Oswald";
-    src: url("/img/Oswald/Oswald-VariableFont_wght.ttf") format("truetype");
-}
-
 /* ---------- VARIÁVEIS ---------- */
 
 :root {
-    --fundo: #202020;
-    --fundo-claro: #292929;
     --fundo-input: #454545;
     --azul: #43c0c6;
     --verde: #3dbc8e;
     --laranja: #ffa052;
-    --branco: #ffffff;
-    --cinza: #a5a5a5;
+
+    --azul-podcast: #00a3c6;
+    --verde-footer: #3bb4b4;
 }
 
-/* ---------- RESET / BASE ---------- */
+/* ---------- BASE ---------- */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-* {
-    margin: 0;
     font-family: inherit;
 }
 
@@ -55,94 +44,48 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* CONFLITO: o outro style.css tinha body { background-color: #e5e7eb; }
-   Fica desativado aqui para não sobrescrever o fundo acima.
-body {
-    background-color: #e5e7eb;
-}
-*/
-
 /* =========================================================
-   CABEÇALHO
+   CABEÇALHO DA HOME  (<header> + <nav>)
    ========================================================= */
 
-.cabecalho {
-    height: 105px;
-    background: #262626;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-bottom: 1px solid #444;
-    z-index: 10;
-}
-
-.cabecalho img {
-    width: auto;
-    height: 67px;
-}
-
 header {
-    background-color: #282828;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px 50px;
+    background-color: #282828;
     border-bottom: 1px solid #888;
-    top: 0;
 }
 
 header img {
     height: 60px;
     width: auto;
-}
-
-.menubutton {
-    position: absolute;
-    left: 40px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: none;
-    border: none;
-    color: white;
-    font-family: "Oswald", sans-serif;
-    font-size: 15px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.menubutton {
-    position: absolute;
-    display: flex;
-    left: 40px;
-    background: none;
-    color: white;
-    text-decoration: none;
-    border: none;
-    align-items: center;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-family: "Oswald", sans-serif;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    padding: 0;
-    gap: 12px;
-}
-
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.hamburger span {
     display: block;
-    width: 23px;
-    height: 3px;
-    background: white;
-    border-radius: 3px;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.menubutton {
+    position: absolute;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .hamburger {
@@ -159,17 +102,98 @@ header img {
     border-radius: 2px;
 }
 
+.icones {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lua,
+.pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.lua:hover,
+.pesquisa:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Ícone de lupa único, usado em todos os botões de busca (herda a cor do botão) */
+.lupa {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round'%3E%3Ccircle cx='10' cy='10' r='6.5'/%3E%3Cpath d='M15 15l6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round'%3E%3Ccircle cx='10' cy='10' r='6.5'/%3E%3Cpath d='M15 15l6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.pesquisa-central button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 2rem;
+    background-color: #282828;
+}
+
+/* Links coloridos do menu (home e busca) */
+
+.podcast-titulo,
+.noticias-titulo,
+.videos-titulo {
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+}
+
+.podcast-titulo { color: var(--azul-podcast); }
+.noticias-titulo { color: var(--verde); }
+.videos-titulo { color: var(--laranja); }
+
 /* =========================================================
-   NAVEGAÇÃO
+   CABEÇALHO DA BUSCA  (.cabecalho + .navegacao)
    ========================================================= */
 
+.cabecalho {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 105px;
+    background: #262626;
+    border-bottom: 1px solid #444;
+}
+
+.cabecalho img {
+    width: auto;
+    height: 67px;
+}
+
 .navegacao {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     height: 43px;
     background: #262626;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
 }
 
 .navegacao a {
@@ -177,26 +201,6 @@ header img {
     font-family: "Oswald", sans-serif;
     font-size: 16px;
     font-weight: 600;
-}
-
-nav {
-    background-color: #282828;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 2rem;
-}
-
-.podcast-titulo {
-    color: var(--azul);
-}
-
-.noticias-titulo {
-    color: var(--verde);
-}
-
-.videos-titulo {
-    color: var(--laranja);
 }
 
 .navegacao::after {
@@ -216,7 +220,7 @@ nav {
 }
 
 /* =========================================================
-   MENU DE CATEGORIAS
+   BUSCA: MENU DE CATEGORIAS
    ========================================================= */
 
 .menu-noticias {
@@ -254,7 +258,6 @@ nav {
     padding-bottom: 12px;
     border-bottom: 3px solid #555;
     text-align: center;
-    text-decoration: none;
     color: white;
     font-family: "Oswald", sans-serif;
     font-size: 17px;
@@ -279,10 +282,6 @@ nav {
 .seta:hover {
     background: #666;
 }
-
-/* =========================================================
-   AÇÕES
-   ========================================================= */
 
 .acoes {
     display: flex;
@@ -319,9 +318,7 @@ nav {
     cursor: pointer;
 }
 
-/* =========================================================
-   PAINEL DE BUSCA
-   ========================================================= */
+/* Painel de busca */
 
 .painel-busca {
     display: none;
@@ -363,9 +360,7 @@ nav {
     cursor: pointer;
 }
 
-/* =========================================================
-   PAINEL DE FILTROS SUPERIOR
-   ========================================================= */
+/* Painel de filtros superior */
 
 .painel-filtros {
     display: none;
@@ -414,7 +409,7 @@ nav {
 }
 
 /* =========================================================
-   CONTAINER PRINCIPAL (BUSCA)
+   BUSCA: CONTAINER E RESULTADOS
    ========================================================= */
 
 .container-busca {
@@ -436,14 +431,11 @@ nav {
 
 .breadcrumb a {
     color: #888;
-    text-decoration: none;
 }
 
 .breadcrumb a:hover {
     color: var(--azul);
 }
-
-/* CAMPO DE PESQUISA CENTRAL */
 
 .pesquisa-central {
     display: flex;
@@ -481,8 +473,6 @@ nav {
     cursor: pointer;
 }
 
-/* RESULTADOS E FILTROS */
-
 .conteudo-busca {
     display: grid;
     grid-template-columns: 2.3fr 0.8fr;
@@ -501,12 +491,10 @@ nav {
 }
 
 .quantidade {
+    margin-bottom: 10px;
     color: white;
     font-size: 14px;
-    margin-bottom: 10px;
 }
-
-/* CADA RESULTADO */
 
 .item-resultado {
     display: flex;
@@ -530,7 +518,7 @@ nav {
 }
 
 .categoria-resultado {
-    color: #00a3c6;
+    color: var(--azul-podcast);
     font-family: "Oswald", sans-serif;
     font-size: 14px;
     font-weight: 600;
@@ -557,8 +545,6 @@ nav {
     font-size: 12px;
 }
 
-/* FIM DOS RESULTADOS */
-
 .fim-resultados {
     margin-top: 30px;
     padding: 25px;
@@ -572,12 +558,12 @@ nav {
 }
 
 /* =========================================================
-   FILTROS LATERAIS
+   BUSCA: FILTROS LATERAIS
    ========================================================= */
 
 .filtros-lateral {
-    background: #252525;
     padding: 25px;
+    background: #252525;
     border-radius: 10px;
 }
 
@@ -585,13 +571,10 @@ nav {
     padding-bottom: 15px;
     margin-bottom: 25px;
     border-bottom: 2px solid var(--azul);
+    color: #55d7e3;
     font-family: "Oswald", sans-serif;
     font-size: 25px;
     font-weight: 500;
-}
-
-.filtros-lateral h2 {
-    color: #55d7e3;
 }
 
 .filtros-lateral h3 {
@@ -672,14 +655,14 @@ nav {
 }
 
 /* =========================================================
-   PÁGINA INICIAL (HOME)
+   HOME: DESTAQUES
    ========================================================= */
 
 .pagina {
     width: 75%;
-    background-color: white;
     margin: auto;
-    margin-top: 8%;
+    margin-top: 40px;
+    background-color: white;
     border-radius: 20px 20px 0 0;
 }
 
@@ -703,7 +686,6 @@ nav {
     border-radius: 12px;
     overflow: hidden;
     color: white;
-    text-decoration: none;
 }
 
 .card-grande img {
@@ -713,13 +695,7 @@ nav {
     height: 70%;
     object-fit: cover;
     border-radius: 12px;
-    border-left: 9px solid #00a3c6;
-}
-
-.card-pequeno img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-left: 9px solid var(--azul-podcast);
 }
 
 .card-texto {
@@ -727,14 +703,14 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 24px;
     z-index: 1;
+    padding: 24px;
 }
 
 .card-texto h2 {
+    margin-bottom: 8px;
     font-size: 1.8rem;
     line-height: 1.2;
-    margin-bottom: 8px;
 }
 
 .card-texto p {
@@ -747,11 +723,11 @@ nav {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: #00a3c6;
+    padding: 8px 16px;
+    background-color: var(--azul-podcast);
     color: white;
     font-weight: 700;
     font-size: 0.85rem;
-    padding: 8px 16px;
     border-radius: 0 0 12px 0;
 }
 
@@ -766,30 +742,30 @@ nav {
     height: 100%;
 }
 
-.card-pequeno h3, .card-pequeno span {
+.card-pequeno img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-pequeno h3,
+.card-pequeno span {
     display: none;
 }
+
+/* =========================================================
+   HOME: ÚLTIMAS NOTÍCIAS
+   ========================================================= */
 
 .ultimas-noticias {
     padding: 20px;
 }
 
-.podcast-titulo {
-    color: #00a3c6;
-    text-decoration: none;
-    font-family: "Oswald", sans-serif;
-}
-
-.noticias-titulo {
-    color: #3dbc8e;
-    text-decoration: none;
-    font-family: "Oswald", sans-serif;
-}
-
-.videos-titulo {
-    color: #ffa052;
-    text-decoration: none;
-    font-family: "Oswald", sans-serif;
+.card-medio img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 12px;
 }
 
 /* =========================================================
@@ -801,9 +777,9 @@ footer {
 }
 
 footer img {
+    display: block;
     width: 32px;
     height: 32px;
-    display: block;
 }
 
 .redes-footer {
@@ -812,27 +788,30 @@ footer img {
     justify-content: center;
     gap: 50px;
     padding: 26px 20px;
-    border-top: 3px solid #3bb4b4;
+    border-top: 3px solid var(--verde-footer);
     border-bottom: 1px solid #424242;
 }
 
-.jovemnerd-redes, .azaghal-redes, .nerdbunker-redes {
+.redes-footer h2 {
+    margin-right: 4px;
+    font-size: 1.1rem;
+}
+
+.jovemnerd-redes,
+.azaghal-redes,
+.nerdbunker-redes {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: "Oswald", sans-serif;
     color: #ffffff;
+    font-family: "Oswald", sans-serif;
     letter-spacing: 1px;
 }
 
-.redes-footer h2 {
-    font-size: 1.1rem;
-    margin-right: 4px;
-}
-
-.jovemnerd-redes, .azaghal-redes {
-    border-right: 1px solid #3bb4b4;
+.jovemnerd-redes,
+.azaghal-redes {
     padding-right: 10px;
+    border-right: 1px solid var(--verde-footer);
 }
 
 .links-footer {
@@ -844,8 +823,8 @@ footer img {
 }
 
 .links-footer h3 {
-    font-family: "Oswald", sans-serif;
     margin-bottom: 6px;
+    font-family: "Oswald", sans-serif;
 }
 
 .links-footer ul {
@@ -855,36 +834,30 @@ footer img {
 
 .links-footer li {
     margin-bottom: 6px;
-    text-decoration: none;
-    font-family: "Oswald", sans-serif;
-    font-size: 0,9rem;
-    color: #888;
     padding: 2px;
+    color: #888;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.9rem;
 }
 
 .podcasts-footer h3 {
-    color: #00a3c6;
-    border-bottom: 3px solid #00a3c6;
+    color: var(--azul-podcast);
+    border-bottom: 3px solid var(--azul-podcast);
 }
 
 .noticias-footer h3 {
-    color: #3dbc8e;
-    border-bottom: 3px solid #3dbc8e;
+    color: var(--verde);
+    border-bottom: 3px solid var(--verde);
 }
 
 .videos-footer h3 {
-    color: #ffa052;
-    border-bottom: 3px solid #ffa052;
+    color: var(--laranja);
+    border-bottom: 3px solid var(--laranja);
 }
 
 .quem-somos-footer h3 {
-    color: #3bb4b4;
-    border-bottom: 3px solid #3bb4b4;
-}
-
-.app-footer h3 {
-    color: #888;
-    border-bottom: 3px solid #888;
+    color: var(--verde-footer);
+    border-bottom: 3px solid var(--verde-footer);
 }
 
 .app-footer {
@@ -892,6 +865,11 @@ footer img {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+}
+
+.app-footer h3 {
+    color: #888;
+    border-bottom: 3px solid #888;
 }
 
 .app-footer img {
@@ -902,17 +880,17 @@ footer img {
 .app-footer > img {
     height: 80px;
     margin-top: 10px;
-    border-top: 1px solid #888;
     padding-top: 10%;
+    border-top: 1px solid #888;
 }
 
 .copyright-footer {
-    background-color: #151515;
-    text-align: center;
     padding: 20px;
+    background-color: #151515;
     color: #8a8a8a;
-    font-size: 0.8rem;
     font-family: "Oswald", sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 .copyright-footer p {
@@ -923,30 +901,15 @@ footer img {
     font-weight: 700;
 }
 
-.jovemnerd-redes,
-.azaghal-redes {
-    border-right: 1px solid #3bb4b4;
-    padding-right: 10px;
-}
-
-.links-footer li {
-    margin-bottom: 6px;
-    text-decoration: none;
-    font-family: "Oswald", sans-serif;
-    font-size: 0.9rem;
-    color: #888;
-    padding: 2px;
-}
-
 /* =========================================================
-   RECOMENDADOS
+   RECOMENDADOS (páginas de podcast)
    ========================================================= */
 
 .titulo-recomendados {
     margin-top: 25px;
     padding-bottom: 12px;
-    border-bottom: 2px solid #43c0c6;
-    color: #43c0c6;
+    border-bottom: 2px solid var(--azul);
+    color: var(--azul);
     font-family: "Oswald", sans-serif;
     font-size: 28px;
 }
@@ -970,7 +933,7 @@ footer img {
 }
 
 .podcast-recomendado {
-    color: #43c0c6;
+    color: var(--azul);
     font-weight: bold;
     font-size: 14px;
 }
@@ -998,15 +961,103 @@ footer img {
 }
 
 .play-podcast {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #43c0c6;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--azul);
+    color: white;
     font-size: 11px;
     font-weight: bold;
-    flex-shrink: 0;
+}
+
+/* =========================================================
+   TEMA CLARO / ESCURO  (controlado por js/tema.js)
+   Cabeçalho, menu e rodapé continuam escuros nos dois temas.
+   ========================================================= */
+
+/* ---- Escuro ---- */
+
+html[data-tema="escuro"] body {
+    background-color: #4f4f4f;
+    color: white;
+}
+
+html[data-tema="escuro"] .pagina {
+    background-color: #252525;
+    color: white;
+}
+
+/* ---- Claro ---- */
+
+html[data-tema="claro"] body {
+    background-color: #e5e7eb;
+    color: #111111;
+}
+
+html[data-tema="claro"] .pagina,
+html[data-tema="claro"] .container-busca {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+html[data-tema="claro"] .filtros-lateral,
+html[data-tema="claro"] .fim-resultados {
+    background-color: #f3f4f6;
+    color: #333333;
+}
+
+html[data-tema="claro"] .breadcrumb {
+    color: #666666;
+}
+
+html[data-tema="claro"] .breadcrumb a {
+    color: #555555;
+}
+
+html[data-tema="claro"] .resultados h1,
+html[data-tema="claro"] .filtros-lateral h2 {
+    color: #00a3c6;
+}
+
+html[data-tema="claro"] .quantidade,
+html[data-tema="claro"] .item-resultado h2,
+html[data-tema="claro"] .opcao-filtro,
+html[data-tema="claro"] .card-recomendado h4 {
+    color: #111111;
+}
+
+html[data-tema="claro"] .item-resultado p,
+html[data-tema="claro"] .titulo-filtro {
+    color: #444444;
+}
+
+html[data-tema="claro"] .item-resultado small,
+html[data-tema="claro"] .card-recomendado small,
+html[data-tema="claro"] .info-episodio {
+    color: #666666;
+}
+
+html[data-tema="claro"] .tag-filtro {
+    background: #e5e7eb;
+    color: #111111;
+}
+
+html[data-tema="claro"] .tag-filtro button {
+    color: #888888;
+}
+
+html[data-tema="claro"] .card-recomendado {
+    border-bottom-color: #dddddd;
+}
+
+/* =========================================================
+   PADRONIZAÇÃO DAS PÁGINAS
+   ========================================================= */
+
+.pagina {
+    min-height: 60vh;
 }

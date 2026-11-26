@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T-Zombii</title>
+    <title>Resultados de busca | Jovem Nerd</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/tema.js"></script>
 </head>
 <body>
-     <div class="cabecalho">
 
     <header>
         <div class="topo">
@@ -23,14 +23,11 @@
             </button>
 
             <a class="logo" href="index.html">
-                <img src="../img/logo-jovemnerd-negative.svg"
-                     alt="logo jovem nerd">
+                <img src="../img/logo-jovemnerd-negative.svg" alt="logo jovem nerd">
             </a>
 
             <div class="icones">
-                <button class="lua" aria-label="Tema escuro">
-                    ☾
-                </button>
+                <button class="lua" aria-label="Tema escuro">☾</button>
 
                 <button class="pesquisa" aria-label="Pesquisar">
                     <span class="lupa"></span>
@@ -41,441 +38,346 @@
     </header>
 
     <nav>
-        <a class="podcast-titulo" href="../Podcasts/podcasts.html">
-            Podcasts
-        </a>
-
-        <a class="noticias-titulo" href="../noticias/noticias.html">
-            Notícias
-        </a>
-
-        <a class="videos-titulo" href="../Videos/videos.html">
-            Vídeos
-        </a>
+        <a class="podcast-titulo" href="../Podcasts/podcasts.html">Podcasts</a>
+        <a class="noticias-titulo" href="../noticias/noticias.html">Notícias</a>
+        <a class="videos-titulo" href="../Videos/videos.html">Vídeos</a>
     </nav>
 
-</div>
     <main class="container-busca">
 
-    <div class="breadcrumb">
-        <a href="../htmls/index.html">Home</a>
-        <span> &gt; </span>
-        <span>Resultados de busca</span>
-    </div>
+        <div class="breadcrumb">
+            <a href="../htmls/index.html">Home</a>
+            <span> &gt; </span>
+            <span>Resultados de busca</span>
+        </div>
 
-    <div class="pesquisa-central">
-        <input type="text"
-               id="buscaPrincipal"
-               placeholder="O que vamos descobrir hoje?"
-               value="t-zombii">
+        <div class="pesquisa-central">
+            <input type="text"
+                   id="buscaPrincipal"
+                   placeholder="O que vamos descobrir hoje?"
+                   value="t-zombii">
 
-        <button id="pesquisarPrincipal">⌕</button>
-    </div>
+            <button id="pesquisarPrincipal" aria-label="Pesquisar"><span class="lupa"></span></button>
+        </div>
 
-    <div class="conteudo-busca">
+        <div class="conteudo-busca">
 
-        <section class="resultados">
+            <section class="resultados">
 
-            <h1>Resultados de busca</h1>
+                <h1>Resultados de busca</h1>
 
-            <p class="quantidade">
-                Exibindo 4 resultados encontrados.
-            </p>
+                <p class="quantidade">Exibindo 4 resultados encontrados.</p>
 
-            <article class="item-resultado">
+                <article class="item-resultado">
+                    <img src="../img/serie_da_minha_vida.jpg" alt="The Last of Us">
 
-                <img src="../img/serie_da_minha_vida.jpg"
-                     alt="The Last of Us">
+                    <div class="texto-resultado">
+                        <span class="categoria-resultado">NerdOffice</span>
 
-                <div class="texto-resultado">
-                    <span class="categoria-resultado">NerdOffice</span>
+                        <h2>
+                            Teaser The Last Of Us Temporada II -
+                            O problema são sempre as pessoas
+                        </h2>
 
-                    <h2>
-                        Teaser The Last Of Us Temporada II -
-                        O problema são sempre as pessoas
-                    </h2>
+                        <small>S16E02 • 15.jan.25</small>
+                    </div>
+                </article>
 
-                    <small>S16E02 • 15.jan.25</small>
+                <article class="item-resultado">
+                    <img src="../img/t_zombii_2_o_livro_dos_vivos.jpg" alt="T-Zombii">
+
+                    <div class="texto-resultado">
+                        <span class="categoria-resultado">Séries, TV e Streaming</span>
+
+                        <h2>
+                            T-Zombii: O Livro dos Vivos, novo
+                            audiodrama do Jovem Nerd, está disponível na Audible
+                        </h2>
+
+                        <p>
+                            Série retoma o primeiro audiodrama da casa
+                            após mais de 12 anos.
+                        </p>
+
+                        <small>Pedro Siqueira • 14.jan.25</small>
+                    </div>
+                </article>
+
+                <article class="item-resultado">
+                    <img src="../img/t_zombii_sequencia_t-zombii.jpg" alt="T-Zombii">
+
+                    <div class="texto-resultado">
+                        <span class="categoria-resultado">Séries, TV e Streaming</span>
+
+                        <h2>
+                            Sequência de T-Zombii, áudio drama do Jovem
+                            Nerd, é anunciada após 13 anos
+                        </h2>
+
+                        <small>Redação NerdBunker • 06.dez.24</small>
+                    </div>
+                </article>
+
+                <article class="item-resultado">
+                    <img src="../img/t_zombii_sequencia_t-zombii.jpg" alt="T-Zombii">
+
+                    <div class="texto-resultado">
+                        <span class="categoria-resultado">NerdCast</span>
+
+                        <h2>T-Zombii: A Gravação dos Mortos - Áudio Drama</h2>
+
+                        <small>Ep.EXTRA • 15.set.23 • 1h12</small>
+                    </div>
+                </article>
+
+                <div class="fim-resultados">
+                    Chegamos ao final dos resultados disponíveis para sua busca! Se não encontrou o que esperava, que tal explorar novos caminhos de pesquisa? Use o campo de busca e os filtros disponíveis para obter conteúdos mais específicos :)
                 </div>
 
-            </article>
+            </section>
 
-            <article class="item-resultado">
+            <aside class="filtros-lateral">
 
-                <img src="../img/t_zombii_2_o_livro_dos_vivos.jpg"
-                     alt="T-Zombii">
+                <h2>Filtros</h2>
 
-                <div class="texto-resultado">
-                    <span class="categoria-resultado">
-                        Séries, TV e Streaming
-                    </span>
+                <h3>Filtros Selecionados</h3>
 
-                    <h2>
-                        T-Zombii: O Livro dos Vivos, novo
-                        audiodrama do Jovem Nerd, está disponível na Audible
-                    </h2>
+                <p class="titulo-filtro">Tags</p>
 
-                    <p>
-                        Série retoma o primeiro audiodrama da casa
-                        após mais de 12 anos.
-                    </p>
-
-                    <small>Pedro Siqueira • 14.jan.25</small>
+                <div class="tag-filtro">
+                    t-zombii
+                    <button id="removerTag" aria-label="Remover filtro">×</button>
                 </div>
 
-            </article>
+                <button class="limpar-filtros" id="limparFiltros">Limpar filtros</button>
 
-            <article class="item-resultado">
+                <hr>
 
-                <img src="../img/t_zombii_sequencia_t-zombii.jpg"
-                     alt="T-Zombii">
+                <h3>CATEGORIAS</h3>
 
-                <div class="texto-resultado">
-                    <span class="categoria-resultado">
-                        Séries, TV e Streaming
-                    </span>
+                <label class="opcao-filtro">
+                    <input type="checkbox" value="Podcasts">
+                    Podcasts
+                </label>
 
-                    <h2>
-                        Sequência de T-Zombii, áudio drama do Jovem
-                        Nerd, é anunciada após 13 anos
-                    </h2>
+                <label class="opcao-filtro">
+                    <input type="checkbox" value="Notícias">
+                    Notícias
+                </label>
 
-                    <small>Redação NerdBunker • 06.dez.24</small>
+                <label class="opcao-filtro">
+                    <input type="checkbox" value="Vídeos">
+                    Vídeos
+                </label>
+
+                <button class="aplicar-lateral" id="aplicarLateral">Aplicar filtros</button>
+
+                <hr>
+
+                <h3 class="titulo-recomendados">Recomendados para você</h3>
+
+                <div class="card-recomendado">
+                    <img src="../img/aceloti%20preocupado.png" alt="">
+                    <div>
+                        <span class="podcast-recomendado">Jovem Nerd Esporte Clube</span>
+                        <h4>A SELEÇÃO BRASILEIRA TEM JEITO? | JNEC 52</h4>
+                        <div class="info-episodio">
+                            <span class="play-podcast">▶</span>
+                            <span>Ep. 52</span>
+                            <span>06.out.26</span>
+                            <span>1h21</span>
+                        </div>
+                    </div>
                 </div>
 
-            </article>
-
-            <article class="item-resultado">
-
-                <img src="../img/t_zombii_sequencia_t-zombii.jpg"
-                     alt="T-Zombii">
-
-                <div class="texto-resultado">
-                    <span class="categoria-resultado">NerdCast</span>
-
-                    <h2>
-                        T-Zombii: A Gravação dos Mortos - Áudio Drama
-                    </h2>
-
-                    <small>Ep.EXTRA • 15.set.23 • 1h12</small>
+                <div class="card-recomendado">
+                    <img src="../img/aceloti%20nova%20era.png" alt="">
+                    <div>
+                        <span class="podcast-recomendado">Jovem Nerd Esporte Clube</span>
+                        <h4>A NOVA ERA ANCELOTTI | JNEC 50</h4>
+                        <div class="info-episodio">
+                            <span class="play-podcast">▶</span>
+                            <span>Ep. 50</span>
+                            <span>22.set.26</span>
+                            <span>1h23</span>
+                        </div>
+                    </div>
                 </div>
 
-            </article>
+                <div class="card-recomendado">
+                    <img src="../img/demian-maiathumbnail_spotify_jnec_49__660f992u.png" alt="">
+                    <div>
+                        <span class="podcast-recomendado">Jovem Nerd Esporte Clube</span>
+                        <h4>PASSADO, PRESENTE E FUTURO DO MMA COM DEMIAN MAIA</h4>
+                        <div class="info-episodio">
+                            <span class="play-podcast">▶</span>
+                            <span>Ep. 49</span>
+                            <span>15.set.26</span>
+                            <span>1h33</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="fim-resultados">
-                Chegamos ao final dos resultados disponíveis para sua busca! Se não encontrou o que esperava, que tal explorar novos caminhos de pesquisa? Use o campo de busca e os filtros disponíveis para obter conteúdos mais específicos :)
-            </div>
+                <div class="card-recomendado">
+                    <img src="../img/bandeiras.png" alt="">
+                    <div>
+                        <span class="podcast-recomendado">Jovem Nerd Esporte Clube</span>
+                        <h4>DIA #19 DA COPA 2026: 29 DE JUNHO - BRASIL PASSA...</h4>
+                        <div class="info-episodio">
+                            <span class="play-podcast">▶</span>
+                            <span>Ep. 26</span>
+                            <span>30.jun.26</span>
+                            <span>1h11</span>
+                        </div>
+                    </div>
+                </div>
 
-        </section>
+                <div class="card-recomendado">
+                    <img src="../img/caneca_de_mamicas.jpg" alt="">
+                    <div>
+                        <span class="podcast-recomendado">Caneca de Mamicas</span>
+                        <h4>O Sono Nosso de Cada Dia</h4>
+                        <div class="info-episodio">
+                            <span class="play-podcast">▶</span>
+                            <span>Ep. 222</span>
+                            <span>24.ago.26</span>
+                            <span>1h29</span>
+                        </div>
+                    </div>
+                </div>
 
-        <aside class="filtros-lateral">
-
-            <h2>Filtros</h2>
-
-            <h3>Filtros Selecionados</h3>
-
-            <p class="titulo-filtro">Tags</p>
-
-            <div class="tag-filtro">
-                t-zombii
-                <button id="removerTag" aria-label="Remover filtro">×</button>
-            </div>
-
-            <button class="limpar-filtros" id="limparFiltros">
-                Limpar filtros
-            </button>
-
-            <hr>
-
-            <h3>CATEGORIAS</h3>
-
-            <label class="opcao-filtro">
-                <input type="checkbox" value="Podcasts">
-                Podcasts
-            </label>
-
-            <label class="opcao-filtro">
-                <input type="checkbox" value="Notícias">
-                Notícias
-            </label>
-
-            <label class="opcao-filtro">
-                <input type="checkbox" value="Vídeos">
-                Vídeos
-            </label>
-
-            <button class="aplicar-lateral" id="aplicarLateral">
-                Aplicar filtros
-            </button>
-            <hr>
-
-<h3 class="titulo-recomendados">
-    Recomendados para você
-</h3>
-
-<div class="card-recomendado">
-
-    <img src="./../img/aceloti preocupado.png">
-
-    <div>
-
-        <span class="podcast-recomendado">
-            Jovem Nerd Esporte Clube
-        </span>
-
-        <h4>
-            A SELEÇÃO BRASILEIRA TEM JEITO? | JNEC 52
-        </h4>
-
-        <div class="info-episodio">
-
-            <span class="play-podcast">▶</span>
-
-            <span>Ep. 52</span>
-
-            <span>06.out.26</span>
-
-            <span>1h21</span>
+            </aside>
 
         </div>
-
-    </div>
-
-</div>
-<div class="card-recomendado">
-
-    <img src="./../img/aceloti nova era.png">
-
-    <div>
-
-        <span class="podcast-recomendado">
-            Jovem Nerd Esporte Clube
-        </span>
-
-        <h4>
-            A NOVA ERA ANCELOTTI | JNEC 50
-        </h4>
-
-        <div class="info-episodio">
-
-            <span class="play-podcast">▶</span>
-
-            <span>Ep. 50</span>
-
-            <span>22.set.26</span>
-
-            <span>1h23</span>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="card-recomendado">
-
-    <img src="./../img/demian-maiathumbnail_spotify_jnec_49__660f992u.png">
-
-    <div>
-
-        <span class="podcast-recomendado">
-            Jovem Nerd Esporte Clube
-        </span>
-
-        <h4>
-            PASSADO, PRESENTE E FUTURO DO MMA COM DEMIAN MAIA
-        </h4>
-
-        <div class="info-episodio">
-
-            <span class="play-podcast">▶</span>
-
-            <span>Ep. 49</span>
-
-            <span>15.set.26</span>
-
-            <span>1h33</span>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="card-recomendado">
-
-    <img src="./../img/bandeiras.png">
-
-    <div>
-
-        <span class="podcast-recomendado">
-            Jovem Nerd Esporte Clube
-        </span>
-
-        <h4>
-            DIA #19 DA COPA 2026: 29 DE JUNHO - BRASIL PASSA...
-        </h4>
-
-        <div class="info-episodio">
-
-            <span class="play-podcast">▶</span>
-
-            <span>Ep. 26</span>
-
-            <span>30.jun.26</span>
-
-            <span>1h11</span>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="card-recomendado">
-
-    <img src="./../img/caneca_de_mamicas.jpg">
-
-    <div>
-
-        <span class="podcast-recomendado">
-            Caneca de Mamicas
-        </span>
-
-        <h4>
-            O Sono Nosso de Cada Dia
-        </h4>
-
-        <div class="info-episodio">
-
-            <span class="play-podcast">▶</span>
-
-            <span>Ep. 222</span>
-
-            <span>24.ago.26</span>
-
-            <span>1h29</span>
-
-        </div>
-
-    </div>
-    </div>      
     </main>
+
     <footer>
         <div class="redes-footer">
-        <div class="jovemnerd-redes">
-            <h2>Jovem Nerd</h2>
-            <a href="https://www.youtube.com/@JovemNerd">
-                <img src="../img/youtube (2).png">
-            </a>
-            <a href="https://www.instagram.com/jovemnerd/">
-                <img  src="../img/instagram.png">
-            </a>
-            <a href="https://x.com/jovemnerd">
-                <img src="../img/twitter.png">
-            </a>
-            <a href="https://www.tiktok.com/@jovemnerd">
-                <img src="../img/tiktok.png">
-            </a>
+            <div class="jovemnerd-redes">
+                <h2>Jovem Nerd</h2>
+                <a href="https://www.youtube.com/@JovemNerd">
+                    <img src="../img/youtube (2).png" alt="youtube">
+                </a>
+                <a href="https://www.instagram.com/jovemnerd/">
+                    <img src="../img/instagram.png" alt="instagram">
+                </a>
+                <a href="https://x.com/jovemnerd">
+                    <img src="../img/twitter.png" alt="twitter">
+                </a>
+                <a href="https://www.tiktok.com/@jovemnerd">
+                    <img src="../img/tiktok.png" alt="tiktok">
+                </a>
+            </div>
+
+            <div class="azaghal-redes">
+                <h2>Azaghal</h2>
+                <a href="https://www.instagram.com/azaghal/">
+                    <img src="../img/instagram.png" alt="instagram">
+                </a>
+                <a href="https://x.com/azaghal">
+                    <img src="../img/twitter.png" alt="twitter">
+                </a>
+            </div>
+
+            <div class="nerdbunker-redes">
+                <h2>NerdBunker</h2>
+                <a href="https://www.youtube.com/@Nerdbunker">
+                    <img src="../img/youtube (2).png" alt="youtube">
+                </a>
+                <a href="https://www.instagram.com/nerdbunker/">
+                    <img src="../img/instagram.png" alt="instagram">
+                </a>
+                <a href="https://x.com/Nerdbunker">
+                    <img src="../img/twitter.png" alt="twitter">
+                </a>
+                <a href="https://www.facebook.com/nerdbunker">
+                    <img src="../img/facebook.png" alt="facebook">
+                </a>
+                <a href="https://www.tiktok.com/@nerdbunker">
+                    <img src="../img/tiktok.png" alt="tiktok">
+                </a>
+            </div>
         </div>
-        <div class="azaghal-redes">
-            <h2>Azaghal</h2>
-            <a href="https://www.instagram.com/azaghal/">
-                <img src="../img/instagram.png">
-            </a>
-            <a href="https://x.com/azaghal">
-                <img src="../img/twitter.png">
-            </a>
-        </div>
-        <div class="nerdbunker-redes">
-            <h2>NerdBunker</h2>
-            <a href="https://www.youtube.com/@Nerdbunker">
-                <img src="../img/youtube (2).png">
-            </a>
-            <a href="https://www.instagram.com/nerdbunker/">
-                <img src="../img/instagram.png" alt=" instagram">
-            </a>
-            <a href="https://x.com/Nerdbunker">
-                <img src="../img/twitter.png" alt="twitter">
-            </a>
-            <a href="https://www.facebook.com/nerdbunker">
-                <img src="../img/facebook.png" alt="facebook">
-            </a>
-            <a href="https://www.tiktok.com/@nerdbunker">
-                <img src="../img/tiktok.png" alt="tiktok">
-            </a>
-        </div>
-        </div>
+
         <div class="links-footer">
             <div class="podcasts-footer">
                 <h3>Podcasts</h3>
                 <ul>
-                <li><a href="../htmls/nerdcast.html">NerdCast</a></li>
-                <li><a href="../htmls/nerdcast-rpg.html">NerdCast RPG</a></li>
-                <li><a href="#">Caneca do Mamicas</a></li>
-                <li><a href="#">Depois do Expediente</a></li>
-                <li><a href="#">Nerdologia</a></li>
-                <li><a href="#">NerdTech</a></li>
-                <li><a href="#">Extras</a></li>
-                <li><a href="#">Papo de Parceiro</a></li>
-                <li><a href="#">França e o Labirinto</a></li>
-                <li><a href="../htmls/t-zombii.html">T-Zombii</a></li>
-            <li><a href="#">Veja mais em Podcasts</a></li>
-        </ul>
+                    <li><a href="../htmls/nerdcast.html">NerdCast</a></li>
+                    <li><a href="../htmls/nerdcast-rpg.html">NerdCast RPG</a></li>
+                    <li><a href="#">Caneca do Mamicas</a></li>
+                    <li><a href="#">Depois do Expediente</a></li>
+                    <li><a href="#">Nerdologia</a></li>
+                    <li><a href="#">NerdTech</a></li>
+                    <li><a href="#">Extras</a></li>
+                    <li><a href="#">Papo de Parceiro</a></li>
+                    <li><a href="#">França e o Labirinto</a></li>
+                    <li><a href="../htmls/t-zombii.html">T-Zombii</a></li>
+                    <li><a href="#">Veja mais em Podcasts</a></li>
+                </ul>
+            </div>
+
+            <div class="noticias-footer">
+                <h3>Notícias</h3>
+                <ul>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="../htmls/series-tv-streaming.html">Séries, TV e Streaming</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Críticas</a></li>
+                    <li><a href="#">Entrevistas</a></li>
+                    <li><a href="#">Curiosidades e etc.</a></li>
+                    <li><a href="#">Veja mais em Notícias</a></li>
+                </ul>
+            </div>
+
+            <div class="videos-footer">
+                <h3>Vídeos</h3>
+                <ul>
+                    <li><a href="../htmls/nerdoffice.html">NerdOffice</a></li>
+                    <li><a href="#">NerdPlayer</a></li>
+                    <li><a href="#">NerdCast Stories</a></li>
+                    <li><a href="#">Nerdologia</a></li>
+                    <li><a href="#">Depois do Expediente</a></li>
+                    <li><a href="#">NerdTour</a></li>
+                    <li><a href="#">TrailerOffice</a></li>
+                    <li><a href="#">Jovem Nerd Entrevista</a></li>
+                    <li><a href="#">Queimando a Língua</a></li>
+                    <li><a href="#">Sr. K</a></li>
+                    <li><a href="#">Veja mais em Vídeos</a></li>
+                </ul>
+            </div>
+
+            <div class="quem-somos-footer">
+                <h3>Quem Somos</h3>
+                <ul>
+                    <li><a href="#">Sobre o Jovem Nerd</a></li>
+                    <li><a href="#">Redes sociais</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Programa de Integridade</a></li>
+                    <li><a href="#">Portal de Segurança</a></li>
+                    <li><a href="#">Fale conosco</a></li>
+                    <li><a href="#">Anuncie</a></li>
+                    <li><a href="#">RSS</a></li>
+                </ul>
+            </div>
+
+            <div class="app-footer">
+                <h3>Baixe o nosso APP</h3>
+                <a href="https://apps.apple.com/us/app/jovem-nerd-oficial/id1122679489">
+                    <img src="../img/appstore.svg" alt="baixe pela app store">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.jovemnerd.app">
+                    <img src="../img/googleplay.svg" alt="baixe pela play store">
+                </a>
+                <img src="../img/logo-jovemnerd-w.svg" alt="logo jovem nerd">
+            </div>
         </div>
-        <div class="noticias-footer">
-            <h3>Notícias</h3>
-            <ul>
-                <li><a href="#">Filmes</a></li>
-                <li><a href="../htmls/series-tv-streaming.html">Séries, TV e Streaming</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">Críticas</a></li>
-                <li><a href="#">Entrevistas</a></li>
-                <li><a href="#">Curiosidades e etc.</a></li>
-                <li><a href="#">Veja mais em Notícias</a></li>
-            </ul>
+
+        <div class="copyright-footer">
+            <p>© 2002 - 2026 Jovem Nerd Produção de Conteúdo LTDA.</p>
+            <p>Todas as imagens de filmes, séries, redes sociais e etc. são marcas registradas dos seus respectivos proprietários.</p>
         </div>
-        <div class="videos-footer">
-            <h3>Vídeos</h3>
-            <ul>
-                <li><a href="../htmls/nerdoffice.html">NerdOffice</a></li>
-                <li><a href="#">NerdPlayer</a></li>
-                <li><a href="#">NerdCast Stories</a></li>
-                <li><a href="#">Nerdologia</a></li>
-                <li><a href="#">Depois do Expediente</a></li>
-                <li><a href="#">NerdTour</a></li>
-                <li><a href="#">TrailerOffice</a></li>
-                <li><a href="#">Jovem Nerd Entrevista</a></li>
-                <li><a href="#">Queimando a Língua</a></li>
-                <li><a href="#">Sr. K</a></li>
-                <li><a href="#">Veja mais em Vídeos</a></li>
-            </ul>
-        </div>
-        <div class="quem-somos-footer">
-            <h3>Quem Somos</h3>
-            <ul>
-                <li><a href="#">Sobre o Jovem Nerd</a></li>
-                <li><a href="#">Redes sociais</a></li>
-                <li><a href="#">Política de Privacidade</a></li>
-                <li><a href="#">Programa de Integridade</a></li>
-                <li><a href="#">Portal de Segurança</a></li>
-                <li><a href="#">Fale conosco</a></li>
-                <li><a href="#">Anuncie</a></li>
-                <li><a href="#">RSS</a></li>
-            </ul>
-        </div>
-        <div class="app-footer">
-            <h3>Baixe o nosso APP</h3>
-            <a href="https://apps.apple.com/us/app/jovem-nerd-oficial/id1122679489">
-                <img src="../img/appstore.svg" alt="baixe pela app store">
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.jovemnerd.app">
-                <img src="../img/googleplay.svg" alt="baixe pela play store">
-            </a>
-            <img src="../img/logo-jovemnerd-w.svg" alt="logo jovem nerd">
-        </div>
-    </div>
-    <div class="copyright-footer">
-        <p>© 2002 - 2026 Jovem Nerd Produção de Conteúdo LTDA.</p>
-        <p>Todas as imagens de filmes, séries, redes sociais e etc. são marcas registradas dos seus respectivos proprietários.</p>
-    </div>
     </footer>
+
 </body>
 </html>
