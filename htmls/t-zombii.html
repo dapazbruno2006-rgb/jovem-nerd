@@ -4,10 +4,359 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T-Zombii</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <main>
-        
+     <div class="cabecalho">
+
+    <header>
+        <div class="topo">
+
+            <button class="menubutton">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span class="menu-texto">MENU</span>
+            </button>
+
+            <a class="logo" href="index.html">
+                <img src="../img/logo-jovemnerd-negative.svg"
+                     alt="logo jovem nerd">
+            </a>
+
+            <div class="icones">
+                <button class="lua" aria-label="Tema escuro">
+                    ☾
+                </button>
+
+                <button class="pesquisa" aria-label="Pesquisar">
+                    <span class="lupa"></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <nav>
+        <a class="podcast-titulo" href="../Podcasts/podcasts.html">
+            Podcasts
+        </a>
+
+        <a class="noticias-titulo" href="../noticias/noticias.html">
+            Notícias
+        </a>
+
+        <a class="videos-titulo" href="../Videos/videos.html">
+            Vídeos
+        </a>
+    </nav>
+
+</div>
+    <main class="container-busca">
+
+    <div class="breadcrumb">
+        <a href="../htmls/index.html">Home</a>
+        <span> &gt; </span>
+        <span>Resultados de busca</span>
+    </div>
+
+    <div class="pesquisa-central">
+        <input type="text"
+               id="buscaPrincipal"
+               placeholder="O que vamos descobrir hoje?"
+               value="t-zombii">
+
+        <button id="pesquisarPrincipal">⌕</button>
+    </div>
+
+    <div class="conteudo-busca">
+
+        <section class="resultados">
+
+            <h1>Resultados de busca</h1>
+
+            <p class="quantidade">
+                Exibindo 4 resultados encontrados.
+            </p>
+
+            <article class="item-resultado">
+
+                <img src="../img/serie_da_minha_vida.jpg"
+                     alt="The Last of Us">
+
+                <div class="texto-resultado">
+                    <span class="categoria-resultado">NerdOffice</span>
+
+                    <h2>
+                        Teaser The Last Of Us Temporada II -
+                        O problema são sempre as pessoas
+                    </h2>
+
+                    <small>S16E02 • 15.jan.25</small>
+                </div>
+
+            </article>
+
+            <article class="item-resultado">
+
+                <img src="../img/t_zombii_2_o_livro_dos_vivos.jpg"
+                     alt="T-Zombii">
+
+                <div class="texto-resultado">
+                    <span class="categoria-resultado">
+                        Séries, TV e Streaming
+                    </span>
+
+                    <h2>
+                        T-Zombii: O Livro dos Vivos, novo
+                        audiodrama do Jovem Nerd, está disponível na Audible
+                    </h2>
+
+                    <p>
+                        Série retoma o primeiro audiodrama da casa
+                        após mais de 12 anos.
+                    </p>
+
+                    <small>Pedro Siqueira • 14.jan.25</small>
+                </div>
+
+            </article>
+
+            <article class="item-resultado">
+
+                <img src="../img/t_zombii_sequencia_t-zombii.jpg"
+                     alt="T-Zombii">
+
+                <div class="texto-resultado">
+                    <span class="categoria-resultado">
+                        Séries, TV e Streaming
+                    </span>
+
+                    <h2>
+                        Sequência de T-Zombii, áudio drama do Jovem
+                        Nerd, é anunciada após 13 anos
+                    </h2>
+
+                    <small>Redação NerdBunker • 06.dez.24</small>
+                </div>
+
+            </article>
+
+            <article class="item-resultado">
+
+                <img src="../img/t_zombii_sequencia_t-zombii.jpg"
+                     alt="T-Zombii">
+
+                <div class="texto-resultado">
+                    <span class="categoria-resultado">NerdCast</span>
+
+                    <h2>
+                        T-Zombii: A Gravação dos Mortos - Áudio Drama
+                    </h2>
+
+                    <small>Ep.EXTRA • 15.set.23 • 1h12</small>
+                </div>
+
+            </article>
+
+            <div class="fim-resultados">
+                Chegamos ao final dos resultados disponíveis para sua busca! Se não encontrou o que esperava, que tal explorar novos caminhos de pesquisa? Use o campo de busca e os filtros disponíveis para obter conteúdos mais específicos :)
+            </div>
+
+        </section>
+
+        <aside class="filtros-lateral">
+
+            <h2>Filtros</h2>
+
+            <h3>Filtros Selecionados</h3>
+
+            <p class="titulo-filtro">Tags</p>
+
+            <div class="tag-filtro">
+                t-zombii
+                <button id="removerTag" aria-label="Remover filtro">×</button>
+            </div>
+
+            <button class="limpar-filtros" id="limparFiltros">
+                Limpar filtros
+            </button>
+
+            <hr>
+
+            <h3>CATEGORIAS</h3>
+
+            <label class="opcao-filtro">
+                <input type="checkbox" value="Podcasts">
+                Podcasts
+            </label>
+
+            <label class="opcao-filtro">
+                <input type="checkbox" value="Notícias">
+                Notícias
+            </label>
+
+            <label class="opcao-filtro">
+                <input type="checkbox" value="Vídeos">
+                Vídeos
+            </label>
+
+            <button class="aplicar-lateral" id="aplicarLateral">
+                Aplicar filtros
+            </button>
+            <hr>
+
+<h3 class="titulo-recomendados">
+    Recomendados para você
+</h3>
+
+<div class="card-recomendado">
+
+    <img src="./../img/aceloti preocupado.png">
+
+    <div>
+
+        <span class="podcast-recomendado">
+            Jovem Nerd Esporte Clube
+        </span>
+
+        <h4>
+            A SELEÇÃO BRASILEIRA TEM JEITO? | JNEC 52
+        </h4>
+
+        <div class="info-episodio">
+
+            <span class="play-podcast">▶</span>
+
+            <span>Ep. 52</span>
+
+            <span>06.out.26</span>
+
+            <span>1h21</span>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="card-recomendado">
+
+    <img src="./../img/aceloti nova era.png">
+
+    <div>
+
+        <span class="podcast-recomendado">
+            Jovem Nerd Esporte Clube
+        </span>
+
+        <h4>
+            A NOVA ERA ANCELOTTI | JNEC 50
+        </h4>
+
+        <div class="info-episodio">
+
+            <span class="play-podcast">▶</span>
+
+            <span>Ep. 50</span>
+
+            <span>22.set.26</span>
+
+            <span>1h23</span>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="card-recomendado">
+
+    <img src="./../img/demian-maiathumbnail_spotify_jnec_49__660f992u.png">
+
+    <div>
+
+        <span class="podcast-recomendado">
+            Jovem Nerd Esporte Clube
+        </span>
+
+        <h4>
+            PASSADO, PRESENTE E FUTURO DO MMA COM DEMIAN MAIA
+        </h4>
+
+        <div class="info-episodio">
+
+            <span class="play-podcast">▶</span>
+
+            <span>Ep. 49</span>
+
+            <span>15.set.26</span>
+
+            <span>1h33</span>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="card-recomendado">
+
+    <img src="./../img/bandeiras.png">
+
+    <div>
+
+        <span class="podcast-recomendado">
+            Jovem Nerd Esporte Clube
+        </span>
+
+        <h4>
+            DIA #19 DA COPA 2026: 29 DE JUNHO - BRASIL PASSA...
+        </h4>
+
+        <div class="info-episodio">
+
+            <span class="play-podcast">▶</span>
+
+            <span>Ep. 26</span>
+
+            <span>30.jun.26</span>
+
+            <span>1h11</span>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="card-recomendado">
+
+    <img src="./../img/caneca_de_mamicas.jpg">
+
+    <div>
+
+        <span class="podcast-recomendado">
+            Caneca de Mamicas
+        </span>
+
+        <h4>
+            O Sono Nosso de Cada Dia
+        </h4>
+
+        <div class="info-episodio">
+
+            <span class="play-podcast">▶</span>
+
+            <span>Ep. 222</span>
+
+            <span>24.ago.26</span>
+
+            <span>1h29</span>
+
+        </div>
+
+    </div>
+    </div>      
     </main>
     <footer>
         <div class="redes-footer">
